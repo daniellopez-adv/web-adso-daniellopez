@@ -1,0 +1,43 @@
+/* Paleta: principal #187171, texto #1F2937, fondo #FFFFFF */
+
+/* Estilos generales */
+body {
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #1F2937;
+    font-family: "Oswald", Arial, sans-serif;
+}
+/* Encabezado y foto */
+header h1 {
+    color: #187171;
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+
+.foto {
+    width: 200px;
+    border-radius: 50%;
+    border: 8px solid #000000;
+}
+
+/* Secciones de la hoja de vida */
+section {
+    margin: 0;
+}
+
+#perfil {
+    background-color: rgb(147, 208, 208);
+    padding:25px 0;
+
+}
+
+/* Titulos */
+h2, h3, h4 {
+    color: tomato;
+}
+
+/* Eliminar números de lista y viñetas */
+ol, ul {
+    list-style-type: none;
+}

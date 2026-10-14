@@ -1,0 +1,58 @@
+body{
+.oswald-bold {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+}
+hr{
+    background-color: rgb(24, 113, 113);
+    height: 5px;
+    width: 50%;
+}
+h1{
+    color: rgb(24, 113, 113);
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+}
+.destacado{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    background-color: rgb(147, 208, 208);
+}
+/* Cuando sea una class se usa . cuando sea un id se usa # */
+#sena{
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(147, 208, 208);
+}
+#adso{
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(147, 208, 208);
+}
+nav a{
+    text-decoration: none;
+    color:rgb(41, 156, 179)
+}
+h2,h3,h4{
+    color:tomato ;
+}
+.parrafo {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+#portada {
+  border: 4px solid #6f4e37;
+  border-radius: 12px;
+}
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  font-weight: 600;
+}
