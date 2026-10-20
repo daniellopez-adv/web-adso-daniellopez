@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #f3f0ff;
+    color: #282344;
+    font-family: Arial, sans-serif;
+}
+
+.tarjeta {
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #e1dafa;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(75, 54, 130, 0.16);
+    text-align: center;
+}
+
+.avatar {
+    display: grid;
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 1rem;
+    place-items: center;
+    border: 4px solid #d9ccff;
+    border-radius: 50%;
+    background-color: #f0ebff;
+    font-size: 3.5rem;
+}
+
+h1 {
+    margin: 0;
+    color: #4c3691;
+    font-size: 1.6rem;
+}
+
+.rol {
+    margin: 0.5rem 0;
+    color: #7555c7;
+    font-weight: 700;
+}
+
+.ciudad {
+    margin: 0 0 1.5rem;
+    color: #625d76;
+}
+
+.perfil,
+.formacion {
+    color: #514b66;
+    line-height: 1.6;
+}
+
+.perfil {
+    margin: 0 0 1.5rem;
+}
+
+.formacion {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+.contacto {
+    margin: 0 0 1.5rem;
+}
+
+.contacto a {
+    color: #5b40a1;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+h2 {
+    margin-bottom: 0.75rem;
+    color: #4c3691;
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.habilidades {
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.habilidades li {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background-color: #eee9ff;
+    color: #4c3691;
+    font-size: 0.9rem;
+}
+
+.boton {
+    padding: 0.75rem 1.2rem;
+    border: 2px solid #5b40a1;
+    border-radius: 10px;
+    background-color: #5b40a1;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton:hover {
+    border-color: #39266f;
+    background-color: #39266f;
+}
+
+.boton:focus-visible {
+    outline: 3px solid #f2a900;
+    outline-offset: 4px;
+}
+
+body.oscuro {
+    background-color: #171426;
+    color: #f1edff;
+}
+
+body.oscuro .tarjeta {
+    border-color: #40365f;
+    background-color: #252039;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.oscuro .avatar {
+    border-color: #594987;
+    background-color: #352c50;
+}
+
+body.oscuro h1,
+body.oscuro h2 {
+    color: #d4c5ff;
+}
+
+body.oscuro .rol {
+    color: #c3aaff;
+}
+
+body.oscuro .ciudad {
+    color: #c2bdd2;
+}
+
+body.oscuro .perfil,
+body.oscuro .formacion {
+    color: #d0cadd;
+}
+
+body.oscuro .contacto a {
+    color: #d4c5ff;
+}
+
+body.oscuro .habilidades li {
+    background-color: #40365f;
+    color: #e2d9ff;
+}
