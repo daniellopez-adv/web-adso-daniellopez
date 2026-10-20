@@ -1,0 +1,107 @@
+/*
+Un solo styles.css permite reutilizar los mismos estilos en todas las páginas,
+mantener una apariencia consistente y cambiar el diseño desde un solo lugar.
+
+Si un h2 tiene una regla de etiqueta y otra de clase con colores distintos,
+gana la regla de clase porque su especificidad es mayor que la del selector
+de etiqueta.
+*/
+
+body {
+    margin: 0;
+    background-color: #fff8ed;
+    color: #30251f;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    border-bottom: 5px solid #68b82e;
+}
+
+.logo {
+    width: 150px;
+}
+
+h1 {
+    color: #c8141e;
+}
+
+h2 {
+    color: #c8141e;
+}
+
+nav {
+    background-color: #68b82e;
+    padding: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+main {
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #e5d7c8;
+    border-radius: 10px;
+}
+
+.imagen-principal {
+    width: 300px;
+    max-width: 100%;
+    border: 4px solid #68b82e;
+    border-radius: 10px;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+table {
+    margin: 15px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #8d251e;
+    padding: 10px;
+}
+
+th {
+    background-color: #c8141e;
+    color: #ffffff;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #30251f;
+    color: #ffffff;
+    padding: 15px;
+}
+
+footer a {
+    color: #a9e879;
+}
+
+.icono-whatsapp {
+    width: 25px;
+    vertical-align: middle;
+}
