@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(229, 241, 253);
+  color: rgb(25, 52, 82);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.formulario {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(34, 87, 140, 0.18);
+}
+
+fieldset {
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgb(183, 207, 232);
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: rgb(37, 93, 150);
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo > label,
+.campo > span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 2px solid rgb(190, 209, 230);
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgb(190, 220, 250);
+  outline-offset: 2px;
+  border-color: rgb(48, 112, 178);
+}
+
+.opcion {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.opcion input {
+  width: auto;
+  margin-right: 0.35rem;
+}
+
+input:user-invalid,
+select:user-invalid,
+input.invalido,
+select.invalido {
+  border-color: #c62828;
+  background-color: #fff5f5;
+}
+
+.error {
+  display: block;
+  min-height: 1.2rem;
+  color: #c62828;
+  font-size: 0.85rem;
+}
+
+.boton {
+  width: 100%;
+  padding: 0.7rem 1.2rem;
+  border: 2px solid #2867a5;
+  border-radius: 8px;
+  background-color: #2867a5;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #1d4f82;
+}

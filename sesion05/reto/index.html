@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursos Complementarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>REGISTRO A CURSOS COMPLEMENTARIOS .</h1>
+      <form action="#" id="formInscripcion" class="formulario">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <div class="campo">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text"id="nombre"name="nombre" minlength="6" required/>
+          </div>
+          <div class="campo">
+            <label for="documento">Documento:</label>
+            <input type="text" id="documento" name="documento" inputmode="numeric" minlength="6" maxlength="10" required/>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required/>
+          </div>
+          <div class="campo">
+            <label for="telefono">Celular:</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}" title="10 dígitos que empiecen por 3">
+          </div>
+          <div class="campo">
+            <label for="terminos">Autorización de datos:</label>
+            <input type="checkbox" id="terminos" name="terminos" required/>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Curso</legend>
+          <div class="campo">
+            <label for="programa">Programa:</label>
+            <select id="programa" name="programa" required>
+              <option value="">Selecciona un curso</option>
+              <option value="">Python Básico</option>
+              <option value="">Introducción al CSS</option>
+              <option value="">Complemento a SQL</option>
+            </select>
+          </div>
+          <div class="campo">
+            <legend>Jornada</legend>
+            <div>
+              <label class="opcion">
+                <input type="radio"name="jornada" value="manana" checked/>Mañana
+              </label>
+              <label class="opcion">
+                <input type="radio" name="jornada" value="tarde" />Tarde
+              </label>
+              <label class="opcion">
+                <input type="radio" name="jornada" value="noche" />Noche
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="boton">Registrarme</button>
+      </form>
+      <section id="resumen"></section>
+    </main>
+  </body>
+</html>
