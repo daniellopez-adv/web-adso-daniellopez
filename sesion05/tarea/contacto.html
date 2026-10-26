@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería Ponquespan - Contacto</title>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/logo.jpg" alt="Logo de Panadería Ponquespan">
+        <h1>Panadería Ponquespan</h1>
+        <nav>
+            <a href="index.html">Inicio 🏠</a>
+            <a href="producto.html">Producto 🛒</a>
+            <a href="contacto.html">Contacto 📲</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contáctanos</h2>
+            <ul>
+                <li>Nuestra ubicación es en: <strong>Cra. 55 #80B-06B</strong></li>
+                <li>Nuestro horario de atención es: <strong>Lunes a sábado: 8:00 A. M. - 8:00 P. M.<br>Domingos: 8:00 A. M. - 7:00 P. M.</strong></li>
+            </ul>
+            <form class="formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre"  required>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo"  required>
+                </div>
+                <div class="campo">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" >
+                </div>
+                <div class="campo">
+                    <label for="motivo">Motivo</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Selecciona un motivo</option>
+                        <option value="pedido">Pedido</option>
+                        <option value="pregunta">Pregunta</option>
+                        <option value="queja">Queja</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>2026 - Panadería Ponquespan - Cra. 55 #80B-06B</p>
+        <p>
+            <a href="https://wa.me/573001234567" target="_blank">
+                <img class="icono-whatsapp" src="img/whatsAPP.png" alt="">
+                Escríbenos por WhatsApp
+            </a>
+        </p>
+    </footer>
+                <!-- El atributo name identifica cada dato para que el navegador pueda enviarlo al procesar el formulario. -->
+</body>
+</html>
