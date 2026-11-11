@@ -1,0 +1,231 @@
+:root {
+    --fondo: #f7efe3;
+    --superficie: #fffaf3;
+    --texto: #38251b;
+    --texto-suave: #786253;
+    --acento: #79513a;
+    --acento-hover: #5e3d2c;
+    --boton-texto: #fffaf3;
+    --tarjeta-fondo: #eee0ce;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --radio: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;   
+    height: auto;
+    display: block;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+body.oscuro {
+    --fondo: #211811;
+    --superficie: #302219;
+    --texto: #f5e9d8;
+    --texto-suave: #c7b29d;
+    --acento: #d3a16f;
+    --acento-hover: #bb8553;
+    --boton-texto: #211811;
+    --tarjeta-fondo: #3a2a20;
+    --sombra: none;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    animation: aparecer 0.6s ease-out; 
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--superficie);
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--acento);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+.hero h1 { 
+    font-size: 2rem; 
+    line-height: 1.2; 
+    color: var(--acento);
+}
+
+.hero img { 
+    border-radius: 16px; 
+    width: 100%;
+    max-width: 360px; 
+    margin: 0 auto; 
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    margin-top: 1rem;
+    border-radius: 999px;
+    background-color: var(--acento);
+    color: var(--boton-texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover { 
+    background-color: var(--acento-hover);
+    transform: translateY(-2px);   
+}
+
+.boton:focus-visible { 
+    outline: 3px solid var(--texto); 
+    outline-offset: 3px; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--acento);
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.beneficio {
+    padding: 1.25rem;
+    border-radius: var(--radio);
+    background-color: var(--tarjeta-fondo);
+}
+
+.pasos {
+    background-color: var(--superficie);
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    border-radius: var(--radio);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pasos li {
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.pie-pagina {
+    background-color: var(--superficie);
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.footer-contenido h3 {
+    color: var(--acento);
+    margin-bottom: 0.5rem;
+}
+
+.footer-contenido p {
+    margin: 0.3rem 0;
+    color: var(--texto-suave);
+}
+
+.footer-contenido a {
+    color: var(--texto-suave);
+}
+
+.derechos {
+    font-size: 0.85rem;
+    margin-top: 1rem !important;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+body, .encabezado, .beneficio, .pasos, .pie-pagina {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+    }
+
+    .hero h1 { 
+        font-size: 2.5rem; 
+    }
+
+    .beneficios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero h1 { 
+        font-size: 2.8rem; 
+    }
+
+    .beneficios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
