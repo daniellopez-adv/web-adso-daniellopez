@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 1. Layout con grid-template-areas */
+.contenedor-dashboard {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.encabezado {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7e3a8;
+    color: #352b24;
+    padding: 1.5rem 2rem;
+}
+
+.encabezado h1 {
+    color: #352b24;
+}
+
+.menu-top a {
+    color: #352b24;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-top a:hover {
+    color: #a84332;
+}
+
+.menu-lateral {
+    grid-area: sidebar;
+    background-color: #31563a;
+    padding: 1.5rem 1rem;
+}
+
+.nav-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.nav-vertical a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.nav-vertical a:hover, .nav-vertical a.activo {
+    background-color: #49664b;
+    color: #f7e3a8;
+}
+
+.contenido-principal {
+    grid-area: main;
+    padding: 2rem;
+}
+
+.contenido-principal h2 {
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+.pie-pagina {
+    grid-area: footer;
+    background-color: #31563a;
+    color: #f8f3e8;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* 2. Cuatro indicadores con repeat(auto-fit, minmax()) */
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.tarjeta-indicador {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 6px rgba(72, 54, 35, 0.08);
+}
+
+.tarjeta-indicador h3 {
+    font-size: 0.85rem;
+    color: #71805b;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.tarjeta-indicador .valor {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #31563a;
+}
+
+/* 3. Galería de productos con Grid */
+.seccion-productos h2 {
+    margin-bottom: 1rem;
+}
+
+.galeria-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-producto {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(72, 54, 35, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info h4 {
+    font-size: 0.95rem;
+    color: #352b24;
+}
+
+.info .precio {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #a84332;
+}
+
+/* 3. Elemento que ocupa 2 columnas */
+.tarjeta-producto.destacado {
+    grid-column: span 2;
+}

@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  background-color: #fffaf0;
+  color: #352b24;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
+  background-color: #fff;
+  border-bottom: 1px solid #f0e2cd;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #352b24;
+  text-decoration: none;
+}
+
+.logo {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #f7e3a8;
+  font-size: 1.6rem;
+}
+
+.nombre-negocio {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.nombre-negocio strong {
+  color: #a84332;
+  font-size: 1.15rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
+
+.menu span {
+  color: #49664b;
+  font-weight: 700;
+}
+
+.contenedor-vitrina {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.introduccion {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.saludo {
+  margin-bottom: 0.5rem;
+  color: #a84332;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.introduccion h1 {
+  margin-bottom: 0.5rem;
+  color: #31563a;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.introduccion > p:last-child {
+  color: #6b6259;
+}
+
+/* Grid organiza productos en filas y columnas; Flexbox conviene para alinear elementos en una sola dirección, como el encabezado. */
+.vitrina {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #eadfce;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 5px 16px rgba(72, 54, 35, 0.08);
+}
+
+.contenedor-imagen {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background-color: #f2eadc;
+}
+
+.contenedor-imagen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.producto.agotado .contenedor-imagen img {
+  filter: grayscale(0.65);
+}
+
+.etiqueta-agotado {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background-color: #a84332;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.info-producto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  padding: 1rem;
+}
+
+.categoria {
+  color: #71805b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.info-producto h2 {
+  color: #352b24;
+  font-size: 1.05rem;
+}
+
+.precio {
+  margin-top: auto;
+  padding-top: 0.35rem;
+  color: #a84332;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.pie-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem clamp(1.5rem, 6vw, 5rem);
+  background-color: #31563a;
+  color: #f8f3e8;
+}
+
+.columna {
+  flex: 1 1 200px;
+}
+
+.columna h2 {
+  margin-bottom: 0.75rem;
+  color: #f7e3a8;
+  font-size: 1.05rem;
+}
+
+.columna p,
+.columna li {
+  color: #e8e4d8;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 560px) {
+  .encabezado {
+    flex-direction: column;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .contenedor-vitrina {
+    padding: 2rem 1rem;
+  }
+
+}
