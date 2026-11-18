@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-fondo: #f3f5f9;
+  --color-texto: #202938;
+  --color-primario: #173b57;
+  --color-acento: #28658a;
+  --color-boton: #176b87;
+  --color-boton-hover: #104d63;
+  --color-borde: #d5deea;
+  --color-subtitulo: #d3e5f1;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1rem;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: "Oswald", sans-serif;
+  line-height: 1.6;
+}
+
+.tarjeta {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgb(23 59 87 / 8%);
+}
+
+.presentacion {
+  text-align: center;
+}
+
+.avatar {
+  display: grid;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-subtitulo);
+  font-size: 3.5rem;
+}
+
+.presentacion h1 {
+  margin: 0;
+  color: var(--color-primario);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.rol {
+  margin: 0.5rem 0 0;
+  color: var(--color-acento);
+}
+
+.contenedor-retos {
+  margin-top: 1.5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  background: var(--color-fondo);
+}
+
+.contenedor-retos h2 {
+  margin: 0 0 1rem;
+  color: var(--color-primario);
+  text-align: center;
+}
+
+.contenedor-retos > p {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid-retos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tarjeta-reto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.25rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(23 59 87 / 6%);
+}
+
+.sesion {
+  margin: 0 0 0.4rem;
+  color: var(--color-acento);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tarjeta-reto h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-primario);
+}
+
+.tarjeta-reto > p:not(.sesion) {
+  margin: 0 0 1rem;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-boton);
+  color: #fff;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.boton:hover {
+  background: var(--color-boton-hover);
+}
+
+.boton:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+.contacto {
+  text-align: center;
+}
+
+.contacto .boton {
+  margin-top: 1rem;
+}
+
+@media (min-width: 650px) {
+  .grid-retos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
