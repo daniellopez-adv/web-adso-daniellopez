@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit de interfaz ADSO</title>
+    <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="encabezado-kit">
+            <p class="insignia insignia-nuevo">Sistema de diseño</p>
+            <h1>Kit de componentes web</h1>
+            <p>Una guía visual construida con variables CSS reutilizables.</p>
+        </div>
+
+        <div class="seccion" aria-labelledby="paleta-titulo">
+            <h2 id="paleta-titulo">Paleta de colores</h2>
+            <div class="muestras-paleta">
+                <div class="muestra">
+                    <span class="color color-principal"></span>
+                    <code>--principal</code>
+                </div>
+                <div class="muestra">
+                    <span class="color color-secundario"></span>
+                    <code>--secundario</code>
+                </div>
+                <div class="muestra">
+                    <span class="color color-peligro"></span>
+                    <code>--peligro</code>
+                </div>
+                <div class="muestra">
+                    <span class="color color-aviso"></span>
+                    <code>--aviso</code>
+                </div>
+                <div class="muestra">
+                    <span class="color color-info"></span>
+                    <code>--info</code>
+                </div>
+                <div class="muestra">
+                    <span class="color color-exito"></span>
+                    <code>--exito</code>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion" aria-labelledby="tipografia-titulo">
+            <h2 id="tipografia-titulo">Tipografía</h2>
+            <h1>Título principal H1</h1>
+            <h2>Título de sección H2</h2>
+            <h3>Subtítulo o título pequeño H3</h3>
+            <p>Este es un párrafo normal con <a href="#tipografia-titulo">un enlace destacado</a> dentro del texto.</p>
+            <small>Texto pequeño para notas, ayudas y metadatos.</small>
+        </div>
+
+        <div class="seccion" aria-labelledby="botones-titulo">
+            <h2 id="botones-titulo">Botones</h2>
+            <div class="fila">
+                <button class="boton boton-principal">Principal</button>
+                <button class="boton boton-secundario">Secundario</button>
+                <button class="boton boton-peligro">Peligro</button>
+                <button class="boton" disabled>Deshabilitado</button>
+            </div>
+        </div>
+
+        <div class="seccion" aria-labelledby="feedback-titulo">
+            <h2 id="feedback-titulo">Alertas e insignias</h2>
+            <div class="alertas">
+                <p class="alerta alerta-exito">Operación completada correctamente.</p>
+                <p class="alerta alerta-error">Ocurrió un error durante el proceso.</p>
+                <p class="alerta alerta-aviso">Revisa la información antes de continuar.</p>
+                <p class="alerta alerta-info">Hay una actualización disponible.</p>
+            </div>
+            <div class="fila">
+                <span class="insignia insignia-nuevo">Nuevo</span>
+                <span class="insignia insignia-oferta">Oferta</span>
+                <span class="insignia insignia-agotado">Agotado</span>
+            </div>
+        </div>
+
+        <div class="seccion" aria-labelledby="estados-titulo">
+            <h2 id="estados-titulo">Estados</h2>
+            <div class="estados">
+                <p class="cargando">Cargando contenido</p>
+                <p class="hecha">Tarea completada</p>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input class="error" id="correo" type="email" value="correo-invalido">
+                    <small class="error">Ingresa un correo electrónico válido.</small>
+                </div>
+                <button class="boton boton-secundario activo">Botón activo</button>
+                <!-- El párrafo siguiente no se ve porque el estado .oculto aplica display: none. -->
+                <p class="oculto">Este contenido está oculto.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
